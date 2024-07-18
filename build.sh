@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define your Docker Compose file name
-COMPOSE_FILE="docker-compose.yml"
+#COMPOSE_FILE="docker-compose.yml"
 
 # Define the name of the Docker image
 IMAGE_NAME="myreactapp"
@@ -19,5 +19,5 @@ docker build -t $IMAGE_NAME .
 
 # Bring up containers using Docker Compose
 
-docker-compose -f $COMPOSE_FILE up -d
+docker run -itd -p 8000:80 --name prasanth $IMAGE_NAME
 
