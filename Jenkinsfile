@@ -12,17 +12,6 @@ pipeline {
                 }
             }
         }
-        
-        stage('Deploy Docker Image') {
-            steps {
-                script {
-                    // Change permissions of deploy.sh before executing
-                    sh 'chmod +x deploy.sh'
-                    // Execute deploy.sh to deploy Docker images
-                    sh './deploy.sh'
-                }
-            }
-        }
     }
 }
 
